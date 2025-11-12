@@ -474,12 +474,13 @@ footer {
   /* With a cropped asset we can use a much cleaner sizing rule:
      - width slightly over 100% gives a subtle bleed into the rounded card
      - minimal transform keeps the product sharp and predictable */
-  width: 110%;
+  width: 105%;
   max-width: none;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  transform: translateX(-10%) translateY(-4px) scale(1.03);
+  /* nudge less to avoid cutting off left-side detail after cropping */
+  transform: translateX(-6%) translateY(-4px) scale(1.03);
   will-change: transform;
 }
 .whyWhat .visual {
