@@ -220,7 +220,7 @@ header.header {
 }
 
 .heroVisual {
-  width: min(760px, 56vw);
+  width: min(520px, 46vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,13 +614,15 @@ footer {
   letter-spacing: -0.02em;
 }
 .solutionHero .heroVisual {
-  flex: 0 0 min(760px, 56vw); /* larger visual for a premium look, responsive cap */
-  width: min(760px, 56vw);
+  /* use percentage-based layout so the visual doesn't force the copy column too narrow */
+  flex: 0 0 46%;
+  width: 46%;
+  max-width: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transform: translateY(-36px); /* moderate lift */
+  transform: translateY(-18px); /* moderate lift, less aggressive */
 }
 .solutionHero .visualInner {
   background: var(--surface);
