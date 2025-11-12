@@ -31,16 +31,22 @@ export default function BannerB() {
 
         <div className='bannerBVisual' aria-hidden='true'>
           <div className='floatingChart'>
-            <img
-              src='/images/wam-overview-no-background-cropped.png'
-              alt='WAM overview diagram'
-              style={{
-                objectFit: 'cover',
-                borderRadius: 8,
-                width: '100%',
-                height: '100%',
-              }}
-            />
+            <picture>
+              <source
+                srcSet='/images/wam-overview-no-background-cropped-transparent.webp'
+                type='image/webp'
+              />
+              <img
+                src='/images/wam-overview-no-background-cropped-transparent.png'
+                alt='WAM overview diagram'
+                style={{
+                  objectFit: 'cover',
+                  borderRadius: 8,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </picture>
           </div>
           <div className='floatingNodes'>
             <img

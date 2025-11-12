@@ -92,11 +92,17 @@ export default function WhyWhatSection() {
 
         <div className='col visual'>
           <div className='phoneMock'>
-            <img
-              src='/images/wam-overview-no-background-cropped.png'
-              alt='WAM overview illustration'
-              className='phoneImg'
-            />
+            <picture>
+              <source
+                srcSet='/images/wam-overview-no-background-cropped-transparent.webp'
+                type='image/webp'
+              />
+              <img
+                src='/images/wam-overview-no-background-cropped-transparent.png'
+                alt='WAM overview illustration'
+                className='phoneImg'
+              />
+            </picture>
           </div>
         </div>
       </div>
