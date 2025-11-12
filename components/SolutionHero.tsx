@@ -39,8 +39,8 @@ export default function SolutionHero() {
             <Image
               src='/images/wam-sensors-with-gateway.png'
               alt='WAM devices'
-              width={620}
-              height={380}
+              width={980}
+              height={560}
             />
           </div>
         </div>
