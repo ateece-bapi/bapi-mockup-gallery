@@ -5,20 +5,15 @@ export default function Header() {
     <header className='header'>
       <div className='container nav' role='navigation' aria-label='Main'>
         <Link href='/' className='logoLink'>
-          {/* Use a native img tag for the small header logo to avoid dev warning from next/image internals */}
-          <img
-            src='/images/wam-logo.png'
-            alt='WAM logo'
-            width={140}
-            height={36}
-          />
+          {/* Header logo (BAPI) - using native img to avoid next/image dev warnings */}
+          <img src='/images/logo.png' alt='BAPI logo' width={140} height={36} />
         </Link>
 
         <nav className='navLinks' aria-label='Primary'>
-          <Link href='/mockup1'>Products</Link>
-          <Link href='/mockup2'>Applications</Link>
-          <Link href='/landing-a'>Landing A</Link>
-          <Link href='/landing-b'>Landing B</Link>
+          <Link href='#'>Solutions</Link>
+          <Link href='#'>Products</Link>
+          <Link href='#'>About Us</Link>
+          <Link href='#'>Contact</Link>
         </nav>
       </div>
     </header>
