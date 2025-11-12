@@ -34,13 +34,17 @@ export default function SolutionHero() {
         </div>
 
         <div className='heroVisual' aria-hidden='true'>
-          <div className='visualInner'>
+          <div
+            className='visualInner'
+            role='img'
+            aria-label='WAM product visual'
+          >
             {/* Use device visual similar to your mockup. If you prefer the simple wordmark-only hero, switch to wam-logo.png here. */}
             <Image
               src='/images/wam-sensors-with-gateway.png'
               alt='WAM devices'
-              width={680}
-              height={420}
+              width={720}
+              height={440}
             />
           </div>
         </div>
