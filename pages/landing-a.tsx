@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import SolutionHero from '../components/SolutionHero';
+import WhyWhatSection from '../components/WhyWhatSection';
 
 const LandingA: NextPage = () => {
   return (
@@ -12,6 +12,8 @@ const LandingA: NextPage = () => {
 
       <main>
         <SolutionHero />
+
+        <WhyWhatSection />
 
         <section className='container section whatIsWam'>
           <div className='twoCol'>
@@ -26,7 +28,7 @@ const LandingA: NextPage = () => {
               </p>
             </div>
             <div className='col colMedia'>
-              <Image
+              <img
                 src='/images/wam-overview-no-background.png'
                 alt='WAM illustration'
                 width={820}
@@ -48,7 +50,7 @@ const LandingA: NextPage = () => {
 
           <div className='whyGrid'>
             <div className='whyMedia'>
-              <Image
+              <img
                 src='/images/wam-devices.png'
                 alt='WAM devices illustration'
                 width={820}
@@ -106,7 +108,7 @@ const LandingA: NextPage = () => {
           <h3 className='reveal'>Product highlights</h3>
           <div className='showcaseRow'>
             <div className='showcaseImage'>
-              <Image
+              <img
                 src='/images/wam-quantum-e1755178852283.png'
                 alt='WAM Quantum'
                 width={420}

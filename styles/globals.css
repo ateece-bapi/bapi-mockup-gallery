@@ -152,7 +152,8 @@ header.header {
 }
 .solutionHero .heroContent {
   flex: 1;
-  max-width: 680px;
+  /* Tighten measure for stronger typographic control (approx. 45-55 chars) */
+  max-width: 48ch;
 }
 .solutionHero .eyebrow {
   font-size: 13px;
@@ -163,11 +164,14 @@ header.header {
   object-position: center; /* Ensure visual image positioning is centered */
 }
 .solutionHero .heroTitle {
-  font-size: 44px;
+  /* Strong, fluid headline with a cap to avoid overly long lines on large screens */
+  font-size: clamp(36px, 4.8vw, 56px);
   line-height: 1.03;
   margin: 0 0 14px;
   color: var(--dark);
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  max-width: 48ch; /* defensive measure */
 }
 .solutionHero .heroSub {
   font-size: clamp(18px, 1.6vw + 12px, 22px);
@@ -220,17 +224,31 @@ header.header {
 }
 
 .heroVisual {
-  width: min(520px, 46vw);
+  width: min(680px, 54vw);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .heroVisual .visualInner {
   background: var(--surface);
-  padding: 22px;
+  /* Slightly smaller padding so the product fills more of the card */
+  padding: 16px;
   border-radius: 18px;
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(3, 58, 130, 0.03);
+  min-height: 360px; /* slightly taller to give the product some room */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.heroIllustration {
+  display: block;
+  width: 92%; /* let the product breathe but appear significantly larger */
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transform: translateY(-4px); /* very subtle lift */
 }
 
 .nav {
@@ -398,6 +416,74 @@ footer {
   flex-direction: column;
   gap: 8px;
 }
+
+/* Why/What section styles (Stripe-inspired) */
+.whyWhatInner {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 48px;
+  align-items: center;
+}
+.whyWhat .copy h2 {
+  font-size: clamp(28px, 3.8vw, 40px);
+  margin: 8px 0 16px;
+  color: var(--brand-blue-strong);
+}
+.whyWhat .lead {
+  font-size: 18px;
+  max-width: 60ch;
+}
+.whyWhat .phoneMock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.whyWhat .phoneImg {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(2, 28, 49, 0.06);
+  border: 1px solid rgba(3, 58, 130, 0.04);
+}
+.featureRow {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.featureItem {
+  flex: 1;
+}
+.featureItem strong {
+  display: block;
+  margin-bottom: 6px;
+}
+.whyWhat .eyebrow.accent {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.featureCtas {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 18px;
+}
+.smallLink {
+  font-size: 14px;
+}
+
+@media (max-width: 880px) {
+  .whyWhatInner {
+    grid-template-columns: 1fr;
+  }
+  .whyWhat .phoneMock {
+    margin-top: 18px;
+  }
+}
 .spec-row {
   display: flex;
   justify-content: space-between;
@@ -506,28 +592,31 @@ footer {
   background: linear-gradient(180deg, #fff, #f4fbff);
 }
 .bannerLeft {
-  flex: 1;
-}
-.bannerLeft h1 {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-.bannerCtas {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-}
-.bannerRight {
-  width: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.deviceHero {
-  background: linear-gradient(135deg, #e8f7ff, #fff);
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #e1f0fb;
+  background: linear-gradient(
+    90deg,
+    var(--brand-blue),
+    var(--brand-blue-strong)
+  );
+  /* stronger lift for emphasis */
+  box-shadow: 0 10px 30px rgba(2, 28, 49, 0.12);
+  border-radius: 999px;
+  padding: 16px 28px; /* larger CTA */
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 17px;
+  .bannerRight {
+    width: 420px;
+    box-shadow: 0 14px 36px rgba(2, 28, 49, 0.14);
+    transform: translateY(-4px);
+    justify-content: center;
+  }
+  background: transparent;
+  color: var(--brand-blue-strong);
+  border: 1px solid rgba(3, 58, 130, 0.06);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -583,7 +672,7 @@ footer {
 .solutionHero .bannerInner {
   /* Use a two-column grid so copy and visual have predictable measures */
   display: grid;
-  grid-template-columns: 1fr 480px;
+  grid-template-columns: 1fr 520px; /* slightly larger visual column so image can breathe */
   gap: 56px;
   align-items: center;
   position: relative;
@@ -635,14 +724,16 @@ footer {
 }
 .solutionHero .visualInner {
   background: var(--surface);
-  padding: 40px; /* balanced premium padding */
-  border-radius: 22px;
-  box-shadow: 0 60px 160px rgba(12, 22, 30, 0.09);
+  padding: 12px; /* balanced padding so image fits without collapsing */
+  border-radius: 20px;
+  box-shadow: 0 48px 120px rgba(12, 22, 30, 0.08);
   border: 1px solid rgba(3, 58, 130, 0.04);
   overflow: hidden; /* ensure the visual can't overflow its rounded container */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 260px; /* ensure visual has enough height to show the illustration */
 }
 
 /* Make images inside the hero visual responsive and contained */
@@ -651,7 +742,18 @@ footer {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+}
+
+/* Force the hero illustration to be larger than the card and let overflow:hidden crop it
+   This helps when the source PNG contains white space so the product fills the visible area */
+.heroIllustration {
+  display: block;
+  width: 96%;
+  max-width: 760px;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(-2px) scale(1.01);
+  position: relative;
 }
 
 .solutionHero .trustRow {

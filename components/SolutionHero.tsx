@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function SolutionHero() {
   return (
     <section className='solutionHero'>
@@ -9,7 +7,7 @@ export default function SolutionHero() {
 
           {/* Wordmark near the eyebrow for stronger brand presence */}
           <div className='heroWordmark' aria-hidden='true'>
-            <Image
+            <img
               src='/images/wam-logo.png'
               alt='WAM logo'
               width={140}
@@ -40,11 +38,12 @@ export default function SolutionHero() {
             aria-label='WAM product visual'
           >
             {/* Use device visual similar to your mockup. If you prefer the simple wordmark-only hero, switch to wam-logo.png here. */}
-            <Image
+            <img
+              className='heroIllustration'
               src='/images/wam-sensors-with-gateway.png'
               alt='WAM devices'
-              width={720}
-              height={440}
+              loading='eager'
+              decoding='sync'
             />
           </div>
         </div>

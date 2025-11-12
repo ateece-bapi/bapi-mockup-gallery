@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// using native <img> to avoid next/image dev warning about fetchPriority
 
 export default function BannerA() {
   return (
@@ -26,7 +26,7 @@ export default function BannerA() {
         <div className='bannerRight' aria-hidden='true'>
           <div className='deviceHero'>
             <div className='deviceFace'>
-              <Image
+              <img
                 src='/images/wam-devices.png'
                 alt='WAM devices'
                 width={260}

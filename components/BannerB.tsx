@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// using native <img> to avoid next/image dev warning about fetchPriority
 
 export default function BannerB() {
   return (
@@ -31,15 +31,19 @@ export default function BannerB() {
 
         <div className='bannerBVisual' aria-hidden='true'>
           <div className='floatingChart'>
-            <Image
+            <img
               src='/images/wam-overview-no-background.png'
               alt='WAM overview diagram'
-              fill
-              style={{ objectFit: 'cover', borderRadius: 8 }}
+              style={{
+                objectFit: 'cover',
+                borderRadius: 8,
+                width: '100%',
+                height: '100%',
+              }}
             />
           </div>
           <div className='floatingNodes'>
-            <Image
+            <img
               src='/images/wam-logo.png'
               alt='WAM logo'
               width={48}
