@@ -965,6 +965,12 @@ footer {
   border-radius: 4px;
   box-shadow: 0 8px 28px rgba(2, 28, 49, 0.06);
 }
+
+/* Hide the accent bar for the section immediately following the hero so
+   it doesn't appear as a stray blue dash between the hero and that section. */
+.solutionHero + .section h2::before {
+  display: none;
+}
 /* Improve paragraph readability inside sections */
 .section p {
   font-size: 18px;
