@@ -88,7 +88,25 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background: var(--bg);
+  /* Subtle Stripe-like layered background:
+     - soft linear base to keep the page bright
+     - two large, very faint radial accents (cool purple + blue) to create depth
+     This keeps surface cards at full white while adding gentle visual interest.
+  */
+  background-image: radial-gradient(
+      600px 240px at 12% 12%,
+      rgba(108, 92, 231, 0.035),
+      transparent 18%
+    ),
+    radial-gradient(
+      900px 320px at 88% 80%,
+      rgba(0, 114, 206, 0.03),
+      transparent 20%
+    ),
+    linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+  background-color: var(--bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--dark);
   font-family: var(--brand-font-stack);
   font-size: var(--type-base);
