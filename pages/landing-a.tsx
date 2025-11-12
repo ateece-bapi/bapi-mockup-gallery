@@ -15,28 +15,7 @@ const LandingA: NextPage = () => {
 
         <WhyWhatSection />
 
-        <section className='container section whatIsWam'>
-          <div className='twoCol'>
-            <div className='col colText'>
-              <h3 className='reveal'>WHAT IS WAM?</h3>
-              <p className='muted'>
-                The Wireless Asset Monitoring (WAM) system lets teams monitor
-                and record sensor readings and receive alerts when thresholds
-                are exceeded. Readings are sent to the cloud and can be viewed
-                from any web-enabled device — helping you prevent equipment
-                failure, reduce product loss, and gain peace of mind.
-              </p>
-            </div>
-            <div className='col colMedia'>
-              <img
-                src='/images/wam-overview-no-background.png'
-                alt='WAM illustration'
-                width={820}
-                height={460}
-              />
-            </div>
-          </div>
-        </section>
+        {/* Removed "What is WAM" section per design — content consolidated into Why/What */}
 
         <section className='container section whyWam'>
           <h3 className='reveal'>WHY WAM?</h3>
