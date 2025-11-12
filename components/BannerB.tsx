@@ -3,25 +3,25 @@ export default function BannerB() {
     <section className='banner bannerB' aria-labelledby='banner-b-title'>
       <div className='bannerInner container'>
         <div className='bannerBContent'>
-          <h2 id='banner-b-title'>
+          <h2 id='banner-b-title' className='reveal'>
             WAM Software — Monitor, Alert, and Control
           </h2>
-          <p className='muted'>
+          <p className='muted reveal'>
             A technical, data-first banner highlighting integrations, data
             export, and calibration options.
           </p>
 
-          <ul className='featureList' aria-hidden='false'>
+          <ul className='featureList reveal' aria-hidden='false'>
             <li>Real-time dashboards</li>
             <li>Exportable CSV & API access</li>
             <li>Field calibration & probe options</li>
           </ul>
 
           <div className='bannerCtas'>
-            <button type='button' className='btn'>
+            <button type='button' className='btn reveal'>
               Request Demo
             </button>
-            <button type='button' className='secondary'>
+            <button type='button' className='secondary reveal'>
               View Docs
             </button>
           </div>

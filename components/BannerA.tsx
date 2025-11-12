@@ -5,17 +5,19 @@ export default function BannerA() {
     <section className='banner bannerA' aria-labelledby='banner-a-title'>
       <div className='bannerInner container'>
         <div className='bannerLeft'>
-          <h1 id='banner-a-title'>WAM — Environmental Monitoring for HVAC</h1>
-          <p className='muted'>
+          <h1 id='banner-a-title' className='reveal'>
+            WAM — Environmental Monitoring for HVAC
+          </h1>
+          <p className='muted reveal'>
             Accurate temperature and humidity sensing for reliable HVAC control
             — field-friendly, rugged, and easy to integrate.
           </p>
 
           <div className='bannerCtas'>
-            <button type='button' className='btn'>
+            <button type='button' className='btn reveal'>
               Request Quote
             </button>
-            <button type='button' className='secondary'>
+            <button type='button' className='secondary reveal'>
               Download Spec
             </button>
           </div>
