@@ -1,11 +1,37 @@
 :root {
-  --brand-blue: #0072c6;
-  --dark: #0f1b26;
-  --muted: #6b7280;
-  --bg: #f5f7fa;
-  --accent: #00a3d6;
-  --nav: #0b3b5c;
-  font-family: Inter, Roboto, Helvetica, Arial, sans-serif;
+  /* Branding tokens (extracted from 2024_brand_standards.pdf and mapped to web-safe values)
+     Notes:
+     - PDF references Acumin (licensed). If you have Acumin webfonts, replace the fallbacks below.
+     - Primary colors map to PANTONE 2935 C (primary) and PANTONE 293 C (deep), approximated as hex.
+  */
+  --brand-blue: #0072ce; /* approx. PANTONE 2935 C */
+  --brand-blue-strong: #0033a0; /* approx. PANTONE 293 C */
+  --accent: #6c5ce7; /* addtl accent (purple) for Stripe-like pops */
+  --bg: #f8fbff; /* page background */
+  --surface: #ffffff; /* cards, surfaces */
+  --muted: #6b7280; /* secondary text */
+  --dark: #0b2538; /* primary text */
+  --nav: var(--brand-blue-strong);
+
+  /* Spacing / radii / shadows */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 6px 18px rgba(2, 28, 49, 0.06);
+  --shadow-md: 0 14px 36px rgba(2, 28, 49, 0.1);
+
+  /* Type scale (base sizing) */
+  --type-base: 16px;
+  --type-scale-1: 20px; /* subhead */
+  --type-scale-2: 28px; /* hero */
+  --type-scale-3: 36px; /* large hero */
+
+  /* Accessible focus color */
+  --focus-ring: rgba(0, 114, 206, 0.16);
+
+  /* Font stack: prefer Acumin if self-hosted, fallback to Inter then system fonts */
+  --brand-font-stack: 'Acumin', Inter, system-ui, -apple-system, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 /* Import Inter for consistent typographic polish */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
@@ -26,19 +52,19 @@ html {
 
 /* Buttons: improved visuals and focus */
 .btn {
-  box-shadow: 0 6px 18px rgba(2, 28, 49, 0.08);
+  box-shadow: var(--shadow-sm);
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 36px rgba(2, 28, 49, 0.12);
+  box-shadow: var(--shadow-md);
 }
 .secondary {
   transition: box-shadow 160ms ease;
 }
 .btn:focus,
 .secondary:focus {
-  outline: 3px solid rgba(0, 114, 198, 0.16);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -64,6 +90,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--dark);
+  font-family: var(--brand-font-stack);
+  font-size: var(--type-base);
 }
 .container {
   max-width: 1100px;
@@ -108,6 +136,82 @@ header.header {
 }
 .deviceFace img {
   border-radius: 12px;
+}
+
+/* SolutionHero / Stripe-like polish */
+.solutionHero {
+  background: linear-gradient(180deg, rgba(3, 58, 130, 0.03), transparent 60%);
+  padding: 56px 0;
+}
+.solutionHero .heroContent {
+  flex: 1;
+  max-width: 640px;
+}
+.solutionHero .eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--brand-blue);
+  margin-bottom: 8px;
+}
+.solutionHero .heroTitle {
+  font-size: var(--type-scale-3);
+  line-height: 1.03;
+  margin: 0 0 12px;
+  color: var(--dark);
+  font-weight: 700;
+}
+.solutionHero .heroSub {
+  font-size: var(--type-scale-1);
+  margin-bottom: 18px;
+}
+
+.bannerCtas .btn {
+  background: linear-gradient(
+    90deg,
+    var(--brand-blue),
+    var(--brand-blue-strong)
+  );
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-weight: 600;
+}
+.bannerCtas .btn:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.bannerCtas .secondary {
+  background: transparent;
+  color: var(--brand-blue-strong);
+  border: 1px solid rgba(3, 58, 130, 0.06);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+}
+
+.trustRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.trustLogos {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.heroVisual {
+  width: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heroVisual .visualInner {
+  background: linear-gradient(180deg, rgba(240, 248, 255, 0.8), var(--surface));
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .nav {
@@ -195,11 +299,11 @@ header.header {
   margin-top: 18px;
 }
 .card {
-  background: #fff;
-  padding: 16px;
-  border-radius: 10px;
-  border: 1px solid #eef6fb;
-  box-shadow: 0 6px 18px rgba(12, 22, 30, 0.04);
+  background: var(--surface);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(3, 58, 130, 0.04);
+  box-shadow: var(--shadow-sm);
 }
 .card h3 {
   margin: 0 0 8px;
@@ -207,7 +311,7 @@ header.header {
   color: var(--dark);
 }
 .note {
-  background: #fff8e6;
+  background: linear-gradient(90deg, #fff8e6, #fffef8);
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #fff0c9;
@@ -289,10 +393,10 @@ footer {
 .tab {
   padding: 8px 12px;
   border-radius: 8px;
-  background: #f2fbff;
-  color: var(--accent);
+  background: linear-gradient(90deg, rgba(108, 92, 231, 0.06), #f6f8ff);
+  color: var(--brand-blue-strong);
   cursor: pointer;
-  border: 1px solid #d8eefc;
+  border: 1px solid rgba(3, 58, 130, 0.04);
 }
 .download {
   display: flex;
