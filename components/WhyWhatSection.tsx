@@ -93,7 +93,7 @@ export default function WhyWhatSection() {
         <div className='col visual'>
           <div className='phoneMock' aria-hidden='false'>
             <img
-              src='/images/wam-overview-no-background-cropped.png'
+              src='/images/wam-overview-no-background.png'
               alt='WAM overview illustration'
               className='phoneImg'
             />
