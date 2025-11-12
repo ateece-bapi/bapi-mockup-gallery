@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BAPI — WAM (Mockup 1 - Modern Product Layout)</title>
+    <style>
+      :root {
+        --brand-blue: #0072c6;
+        --dark: #0f1b26;
+        --muted: #6b7280;
+        --card: #ffffff;
+        --bg: #f5f7fa;
+        --accent: #00a3d6;
+        font-family: Inter, Roboto, Helvetica, Arial, sans-serif;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: var(--bg);
+        color: var(--dark);
+      }
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e6eef6;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo {
+        font-weight: 700;
+        color: var(--brand-blue);
+        font-size: 20px;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .hero {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        padding: 36px 0;
+      }
+      .hero-left {
+        flex: 1;
+      }
+      .hero h1 {
+        font-size: 32px;
+        margin: 0;
+        color: var(--dark);
+      }
+      .hero p {
+        color: var(--muted);
+        margin: 12px 0 20px;
+        line-height: 1.5;
+      }
+      .cta-row {
+        display: flex;
+        gap: 12px;
+      }
+      .btn {
+        background: var(--brand-blue);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 8px;
+        border: 0;
+        cursor: pointer;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--brand-blue);
+        border: 1px solid #dbeefc;
+      }
+      .hero-right {
+        width: 420px;
+      }
+      .device {
+        background: linear-gradient(135deg, #e8f7ff 0%, #fff 60%);
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid #e1f0fb;
+      }
+      .filters {
+        display: flex;
+        gap: 8px;
+        margin: 18px 0;
+      }
+      .filter {
+        background: #fff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #e8eef2;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .card {
+        background: var(--card);
+        padding: 16px;
+        border-radius: 10px;
+        border: 1px solid #eef6fb;
+        box-shadow: 0 6px 18px rgba(12, 22, 30, 0.04);
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        color: var(--dark);
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .specs {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 13px;
+        flex-wrap: wrap;
+      }
+      footer {
+        padding: 28px 0;
+        margin-top: 36px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column;
+        }
+        .hero-right {
+          width: 100%;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      /* Designer notes */
+      .note {
+        background: #fff8e6;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #fff0c9;
+        margin-top: 12px;
+        color: #8a5c00;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">BAPI HVAC — WAM</div>
+        <nav
+          style="
+            margin-left: auto;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+          "
+        >
+          <a href="#">Products</a>
+          <a href="#">Applications</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-left">
+          <h1>
+            Wall-mount and duct-mount temperature/humidity solutions — WAM
+          </h1>
+          <p>
+            Accurate, reliable air monitoring with HVAC-grade sensors and easy
+            field wiring. Select models for general environments, clean rooms,
+            and critical HVAC system control.
+          </p>
+          <div class="cta-row">
+            <button class="btn">Request Quote</button>
+            <button class="btn ghost">Download Spec</button>
+          </div>
+
+          <div class="note">
+            Draft 2 mockup: emphasize product selection and quick comparison.
+            Cards below are interactive in the final design with expandable
+            specs.
+          </div>
+
+          <div style="margin-top: 18px">
+            <div class="filters">
+              <div class="filter">All Types</div>
+              <div class="filter">Temperature</div>
+              <div class="filter">Humidity</div>
+              <div class="filter">Duct/Wall</div>
+              <div class="filter">IP65</div>
+            </div>
+
+            <div class="grid" aria-label="Product grid">
+              <article class="card" role="article">
+                <h3>WAM-100 — Basic Wall Sensor</h3>
+                <p>Economical temperature sensor for general spaces.</p>
+                <div class="specs">
+                  <div>Temp ±0.3°C</div>
+                  <div>|</div>
+                  <div>2-wire</div>
+                  <div>|</div>
+                  <div>Plenum rated</div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>WAM-250 — Temp + RH</h3>
+                <p>Wall-mounted combined temperature and humidity monitor.</p>
+                <div class="specs">
+                  <div>±2% RH</div>
+                  <div>|</div>
+                  <div>Digital output</div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>WAM-400 — Duct Probe</h3>
+                <p>Rugged duct probe for accurate airstream readings.</p>
+                <div class="specs">
+                  <div>Probe 6"</div>
+                  <div>|</div>
+                  <div>IP65</div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>WAM-600 — Cleanroom</h3>
+                <p>Low-outgassing sensor for controlled environments.</p>
+                <div class="specs">
+                  <div>ISO Class 5</div>
+                  <div>|</div>
+                  <div>±0.2°C</div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>WAM-700 — Multi-sensor</h3>
+                <p>Temperature, humidity and optional CO2 sensing.</p>
+                <div class="specs">
+                  <div>Modbus</div>
+                  <div>|</div>
+                  <div>4-20mA</div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>WAM-800 — IP-rated</h3>
+                <p>Weatherproof enclosure for exterior mounting.</p>
+                <div class="specs">
+                  <div>IP66</div>
+                  <div>|</div>
+                  <div>Stainless</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <div class="device" role="complementary">
+            <h4 style="margin: 0 0 8px">Quick Specs & Downloads</h4>
+            <p style="margin: 0 0 12px; color: var(--muted)">
+              Select a product to view detailed specs, wiring diagrams and
+              accessory lists.
+            </p>
+            <div style="display: flex; gap: 10px">
+              <button class="btn" style="flex: 1">Spec Sheet</button>
+              <button class="btn ghost" style="flex: 1">Wiring</button>
+            </div>
+
+            <div
+              style="
+                margin-top: 12px;
+                border-top: 1px dashed #e6f3fb;
+                padding-top: 12px;
+                color: var(--muted);
+                font-size: 13px;
+              "
+            >
+              <strong>Contact local rep</strong><br />
+              Call: (555) 555‑5555<br />Email: sales@bapi.com
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+          "
+        >
+          <div>© BAPI HVAC — WAM product family</div>
+          <div>Privacy · Terms · Support</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
