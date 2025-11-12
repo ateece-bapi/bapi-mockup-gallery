@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import BannerA from '../components/BannerA';
+import SolutionHero from '../components/SolutionHero';
 
 const LandingA: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const LandingA: NextPage = () => {
       </Head>
 
       <main>
-        <BannerA />
+        <SolutionHero />
 
         <section className='container section features'>
           <h3 className='reveal'>Designed for reliable HVAC control</h3>

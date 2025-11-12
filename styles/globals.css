@@ -431,6 +431,81 @@ footer {
 .bannerB {
   background: linear-gradient(90deg, #f7fbff, #ffffff);
 }
+
+/* Solution-focused hero (Stripe-like) */
+.solutionHero {
+  padding: 72px 0;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+}
+.solutionHero .bannerInner {
+  align-items: center;
+  gap: 32px;
+}
+.solutionHero .heroContent {
+  flex: 1;
+  max-width: 640px;
+}
+.solutionHero .eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.solutionHero .heroTitle {
+  font-size: 48px;
+  margin: 0 0 12px;
+  line-height: 1.03;
+  color: var(--dark);
+}
+.solutionHero .heroSub {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.solutionHero .heroVisual {
+  flex: 0 0 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.solutionHero .visualInner {
+  background: linear-gradient(180deg, #fff, #f4fbff);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(12, 22, 30, 0.08);
+}
+.trustRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+.trustLogos {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .solutionHero {
+    padding: 40px 0;
+  }
+  .solutionHero .bannerInner {
+    flex-direction: column;
+  }
+  .solutionHero .heroVisual {
+    width: 100%;
+    order: 2;
+  }
+  .solutionHero .heroContent {
+    order: 1;
+  }
+  .solutionHero .heroTitle {
+    font-size: 28px;
+  }
+}
+
 .bannerBContent {
   flex: 1;
 }
