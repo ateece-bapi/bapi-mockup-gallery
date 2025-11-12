@@ -12,6 +12,15 @@ export default function WhyWhatSection() {
             so you can prevent loss and reduce risk.
           </p>
 
+          <div className='bannerCtas cta-row'>
+            <button className='btn' aria-label='Request a demo'>
+              Request a demo
+            </button>
+            <a className='secondary' href='#' aria-label='See sample dashboard'>
+              See sample dashboard
+            </a>
+          </div>
+
           <div className='featureRow'>
             <div className='featureItem'>
               <div className='featureIcon' aria-hidden='true'>
@@ -92,17 +101,11 @@ export default function WhyWhatSection() {
 
         <div className='col visual'>
           <div className='phoneMock' aria-hidden='false'>
-            <picture>
-              <source
-                srcSet='/images/wam-overview-no-background-cropped-transparent.webp'
-                type='image/webp'
-              />
-              <img
-                src='/images/wam-overview-no-background-cropped-transparent.png'
-                alt='WAM overview illustration'
-                className='phoneImg'
-              />
-            </picture>
+            <img
+              src='/images/wam-overview-no-background.png'
+              alt='WAM overview illustration'
+              className='phoneImg'
+            />
           </div>
         </div>
       </div>
