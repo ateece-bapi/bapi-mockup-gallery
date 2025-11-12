@@ -172,11 +172,7 @@ header.header {
   max-width: 56ch;
 }
 
-/* DEBUG: visual cue so you can confirm theme is active locally — remove after review */
-.solutionHero.debug-visible {
-  outline: 3px solid rgba(255, 0, 119, 0.12);
-  box-shadow: 0 20px 80px rgba(3, 58, 130, 0.03) inset;
-}
+/* Debug helper removed — final polish applied */
 
 .bannerCtas .btn {
   background: linear-gradient(
@@ -184,11 +180,12 @@ header.header {
     var(--brand-blue),
     var(--brand-blue-strong)
   );
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border-radius: 999px;
-  padding: 12px 20px;
-  font-weight: 700;
+  padding: 14px 24px; /* larger, more prominent CTA */
+  font-weight: 800;
   letter-spacing: -0.01em;
+  font-size: 16px;
 }
 .bannerCtas .btn:hover {
   box-shadow: var(--shadow-md);
@@ -555,50 +552,50 @@ footer {
 
 /* Solution-focused hero (Stripe-like) */
 .solutionHero {
-  padding: 92px 0 64px;
+  padding: 110px 0 72px; /* more top breathing room like senior marketing sites */
   background: linear-gradient(180deg, #ffffff, #f8fbff);
 }
 .solutionHero .bannerInner {
   align-items: center;
-  gap: 48px;
+  gap: 56px;
 }
 .solutionHero .heroContent {
   flex: 1;
-  max-width: 560px; /* narrower measure for stronger hierarchy */
+  max-width: 520px; /* slightly narrower measure for improved readability */
 }
 .solutionHero .eyebrow {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--brand-blue-strong);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .solutionHero .heroTitle {
-  font-size: 52px;
-  margin: 0 0 14px;
-  line-height: 1.02;
+  font-size: 48px; /* large but more balanced than 52 */
+  margin: 0 0 18px;
+  line-height: 1.04;
   color: var(--dark);
   font-weight: 800;
-  letter-spacing: -0.02em;
 }
 .solutionHero .heroSub {
   font-size: 18px;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
   color: var(--muted);
-  max-width: 60ch;
+  max-width: 48ch; /* keep line-length comfortable */
+  line-height: 1.6;
 }
 .solutionHero .heroVisual {
-  flex: 0 0 560px;
+  flex: 0 0 480px; /* reduce visual dominance so text breathes more */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .solutionHero .visualInner {
   background: var(--surface);
-  padding: 28px;
-  border-radius: 20px;
-  box-shadow: 0 30px 80px rgba(12, 22, 30, 0.06);
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 40px 120px rgba(12, 22, 30, 0.06);
   border: 1px solid rgba(3, 58, 130, 0.03);
 }
 .trustRow {
@@ -696,13 +693,13 @@ footer {
 
 /* Sections and layout helpers for full landing pages */
 .section {
-  padding: 64px 0;
+  padding: 96px 0; /* more breathing room between sections */
 }
 .features .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 28px;
+  gap: 32px;
+  margin-top: 36px;
 }
 .showcaseRow {
   display: flex;
@@ -717,7 +714,8 @@ footer {
   flex: 1;
 }
 .cards .card {
-  padding: 28px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
 }
 .ctaStrip {
   background: linear-gradient(90deg, #fff, #f6fbff);
