@@ -473,23 +473,17 @@ footer {
 .whyWhat .phoneMockBg {
   width: 100%;
   height: 100%;
-  background-image: url('/images/wam-overview-no-background-cropped-transparent.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; /* ensure whole illustration is visible */
+  /* legacy background container removed; keep in case we revert */
+  display: none;
 }
 .whyWhat .phoneImg {
-  /* Use contain so the full illustration is visible inside the mock card.
-     Avoid heavy transforms that can clip content — the cropped asset already
-     removes whitespace so we can show the whole composition reliably. */
-  width: auto;
+  display: block;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  height: 100%;
   border-radius: 8px;
   object-fit: contain;
   object-position: center;
-  transform: none;
-  will-change: auto;
 }
 .whyWhat .visual {
   display: flex;
@@ -863,10 +857,15 @@ footer {
 .floatingChart .chartBg {
   width: 100%;
   height: 100%;
-  background-image: url('/images/wam-overview-no-background-cropped-transparent.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  display: none; /* prefer <img> for the floating chart for now */
+}
+
+.floatingChart .chartImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 .floatingNodes {
   position: absolute;

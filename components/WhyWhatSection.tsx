@@ -91,11 +91,11 @@ export default function WhyWhatSection() {
         </div>
 
         <div className='col visual'>
-          <div className='phoneMock' aria-hidden='true'>
-            <div
-              className='phoneMockBg'
-              role='img'
-              aria-label='WAM overview illustration'
+          <div className='phoneMock' aria-hidden='false'>
+            <img
+              src='/images/wam-overview-no-background-cropped.png'
+              alt='WAM overview illustration'
+              className='phoneImg'
             />
           </div>
         </div>

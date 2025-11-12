@@ -31,7 +31,11 @@ export default function BannerB() {
 
         <div className='bannerBVisual' aria-hidden='true'>
           <div className='floatingChart'>
-            <div className='chartBg' aria-hidden='true' />
+            <img
+              src='/images/wam-overview-no-background-cropped.png'
+              alt='WAM overview diagram'
+              className='chartImg'
+            />
           </div>
           <div className='floatingNodes'>
             <img
