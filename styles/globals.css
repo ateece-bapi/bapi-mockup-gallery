@@ -603,27 +603,27 @@ footer {
   margin-bottom: 12px;
 }
 .solutionHero .heroTitle {
-  font-size: 56px; /* bold, senior-level headline */
+  font-size: 48px; /* tuned down for balance */
   margin: 0 0 18px;
-  line-height: 1.03;
+  line-height: 1.04;
   color: var(--dark);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
-.solutionHero .heroSub {
-  font-size: 18px;
-  margin-bottom: 28px;
-  color: var(--muted);
-  max-width: 46ch; /* comfortable line-length */
-  line-height: 1.6;
-}
 .solutionHero .heroVisual {
-  flex: 0 0 680px; /* larger visual to emphasize product */
+  flex: 0 0 520px; /* reduced visual width for better balance */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transform: translateY(-48px); /* lift visual to overlap sections below */
+  transform: translateY(-36px); /* moderate lift */
+}
+.solutionHero .visualInner {
+  background: var(--surface);
+  padding: 28px; /* balanced padding */
+  border-radius: 20px;
+  box-shadow: 0 40px 120px rgba(12, 22, 30, 0.06);
+  border: 1px solid rgba(3, 58, 130, 0.035);
 }
 .solutionHero .visualInner {
   background: var(--surface);
