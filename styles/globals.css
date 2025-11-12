@@ -580,13 +580,13 @@ footer {
 }
 .solutionHero .bannerInner {
   align-items: flex-start; /* left column aligns to top for a marketing feel */
-  gap: 64px;
+  gap: 72px;
   position: relative;
   z-index: 2;
 }
 .solutionHero .heroContent {
   flex: 1;
-  max-width: 480px; /* narrower measure for strong hierarchy */
+  max-width: 620px; /* allow more room for headline copy per request */
   padding-top: 6px;
 }
 .solutionHero .eyebrow {
@@ -618,12 +618,12 @@ footer {
   line-height: 1.6;
 }
 .solutionHero .heroVisual {
-  flex: 0 0 520px; /* allow a slightly larger visual that floats */
+  flex: 0 0 420px; /* reduce visual width so text can occupy more space */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transform: translateY(-48px); /* lift visual to overlap sections below */
+  transform: translateY(-36px); /* lift visual to overlap sections below */
 }
 .solutionHero .visualInner {
   background: var(--surface);
@@ -738,6 +738,30 @@ footer {
 /* Sections and layout helpers for full landing pages */
 .section {
   padding: 96px 0; /* more breathing room between sections */
+}
+.whatIsWam .twoCol {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.whatIsWam .colText {
+  flex: 1 1 48%;
+  max-width: 60ch;
+}
+.whatIsWam .colMedia {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .whatIsWam .twoCol {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .whatIsWam .colMedia {
+    width: 100%;
+  }
 }
 .features .cards {
   display: grid;

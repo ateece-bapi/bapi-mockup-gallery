@@ -13,6 +13,29 @@ const LandingA: NextPage = () => {
       <main>
         <SolutionHero />
 
+        <section className='container section whatIsWam'>
+          <div className='twoCol'>
+            <div className='col colText'>
+              <h3 className='reveal'>WHAT IS WAM?</h3>
+              <p className='muted'>
+                The Wireless Asset Monitoring (WAM) system lets teams monitor
+                and record sensor readings and receive alerts when thresholds
+                are exceeded. Readings are sent to the cloud and can be viewed
+                from any web-enabled device — helping you prevent equipment
+                failure, reduce product loss, and gain peace of mind.
+              </p>
+            </div>
+            <div className='col colMedia'>
+              <Image
+                src='/images/wam-overview-no-background.png'
+                alt='WAM illustration'
+                width={640}
+                height={360}
+              />
+            </div>
+          </div>
+        </section>
+
         <section className='container section features'>
           <h3 className='reveal'>Designed for reliable HVAC control</h3>
           <p className='muted reveal'>
