@@ -418,141 +418,99 @@ footer {
 }
 
 /* Why/What section styles (Stripe-inspired) */
+.whyWhat {
+  /* gentle background vignette to lift the mock */
+  background-image: radial-gradient(
+    900px 240px at 82% 32%,
+    rgba(2, 28, 49, 0.02),
+    transparent 30%
+  );
+  padding-top: 36px;
+  padding-bottom: 56px;
+}
 .whyWhatInner {
   display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 48px;
+  /* give the visual more real estate so the overview illustration can be larger */
+  grid-template-columns: 1fr 640px;
+  gap: 64px;
   align-items: center;
 }
 .whyWhat .copy h2 {
-  font-size: clamp(28px, 3.8vw, 40px);
-  margin: 8px 0 16px;
+  font-size: clamp(28px, 3.4vw, 40px);
+  margin: 6px 0 14px;
   color: var(--brand-blue-strong);
+  line-height: 1.02;
 }
 .whyWhat .lead {
   font-size: 18px;
-  max-width: 60ch;
+  max-width: 58ch;
+  margin-bottom: 18px;
+  color: var(--muted);
+  line-height: 1.65;
 }
 .whyWhat .phoneMock {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 18px; /* slightly tighter so image can scale up */
+  border-radius: 18px;
+  box-shadow: 0 36px 80px rgba(2, 28, 49, 0.06);
+  border: 1px solid rgba(3, 58, 130, 0.035);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(250, 252, 255, 0.98)
+  );
+  transform: translateX(4px); /* reduced offset for better alignment */
 }
 .whyWhat .phoneImg {
-  width: 100%;
-  .whyWhatInner {
-    display: grid;
-    grid-template-columns: 1fr 520px;
-    gap: 56px;
-    align-items: center;
-  }
-  .whyWhat .copy h2 {
-    font-size: clamp(28px, 3.4vw, 40px);
-    margin: 6px 0 14px;
-    color: var(--brand-blue-strong);
-    line-height: 1.02;
-  }
-  .whyWhat .lead {
-    font-size: 18px;
-    max-width: 58ch;
-    margin-bottom: 18px;
-    color: var(--muted);
-    line-height: 1.65;
-  }
-  .whyWhat {
-    /* gentle background vignette to lift the mock */
-    background-image: radial-gradient(
-      900px 240px at 82% 32%,
-      rgba(2, 28, 49, 0.02),
-      transparent 30%
-    );
-    padding-top: 36px;
-    padding-bottom: 56px;
-  }
-  .whyWhat .phoneMock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 28px;
-    border-radius: 22px;
-    /* softer, larger shadow to match senior marketing aesthetic */
-    box-shadow: 0 36px 80px rgba(2, 28, 49, 0.06);
-    border: 1px solid rgba(3, 58, 130, 0.035);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.9),
-      rgba(250, 252, 255, 0.95)
-    );
-    transform: translateX(8px);
-  }
-  .whyWhat .phoneImg {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-  }
-  .featureRow {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 40px;
-    margin-top: 10px;
-  }
-  .featureItem {
-    min-width: 0;
-  }
-  .featureItem {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-  }
-  .featureIcon {
-    width: 48px;
-    height: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: linear-gradient(
-      180deg,
-      var(--brand-blue),
-      var(--brand-blue-strong)
-    );
-    box-shadow: 0 8px 20px rgba(2, 28, 49, 0.08);
-    flex-shrink: 0;
-  }
-  .featureCopy h5 {
-    margin: 0 0 8px 0;
-    font-size: 20px;
-    color: var(--dark);
-    font-weight: 800;
-  }
-  .featureCopy .muted {
-    margin: 0;
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
-    max-width: 44ch;
-  }
-  .whyWhat .eyebrow.accent {
-    color: var(--accent);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-  .featureCtas {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .smallLink {
-    font-size: 14px;
-    color: var(--muted);
-  }
-  gap: 8px;
-  margin-top: 14px;
+  width: 96%;
+  height: auto;
+  border-radius: 10px;
+  /* allow the illustration to scale larger while keeping a little gutter */
+  max-width: 760px;
+  object-fit: contain;
+}
+.whyWhat .visual {
+  display: flex;
+  justify-content: flex-end;
+}
+.featureRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 48px;
+  margin-top: 18px;
+}
+.featureItem {
+  min-width: 0;
+  display: block; /* stack title + copy for a cleaner, professional list */
+  padding: 6px 0 18px 0;
+}
+.featureIcon {
+  display: none;
+} /* hide icon tiles for a simpler, typographic treatment */
+.featureCopy h5 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: var(--dark);
+  font-weight: 900;
+}
+.featureCopy .muted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 60ch;
+}
+.featureCtas {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 10px;
+}
+.smallLink {
+  font-size: 14px;
+  color: var(--muted);
 }
 .tab {
   padding: 8px 12px;
