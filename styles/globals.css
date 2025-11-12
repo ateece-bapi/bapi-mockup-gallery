@@ -457,7 +457,7 @@ footer {
 
   .btn.ghost {
     background: transparent;
-    color: var(--brand-blue);
+    color: var(--brand-blue-strong);
     border: 1px solid rgba(3, 58, 130, 0.22);
     padding: 10px 14px;
     border-radius: 10px;
@@ -482,6 +482,7 @@ footer {
     min-height: 48px;
     display: inline-flex;
     align-items: center;
+    color: var(--brand-blue-strong);
   }
 
   /* Ensure button.secondary mirrors anchor.secondary */
