@@ -1620,18 +1620,14 @@ footer {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: linear-gradient(
-    135deg,
-    var(--brand-blue),
-    var(--brand-blue-strong)
-  );
-  color: white;
+  background: #ffc843;
+  color: #1a1a1a;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 12px rgba(0, 114, 206, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 200, 67, 0.4);
 }
 
 .mockupCard h3 {
@@ -1653,13 +1649,14 @@ footer {
 .cardTag {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(0, 114, 206, 0.08);
-  color: var(--brand-blue-strong);
+  background: rgba(255, 200, 67, 0.15);
+  color: #1a1a1a;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 600;
   align-self: flex-start;
   margin-top: 8px;
+  border: 1px solid rgba(255, 200, 67, 0.3);
 }
 
 .hubFooter {
