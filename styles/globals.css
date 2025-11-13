@@ -184,11 +184,15 @@ header.header {
 }
 .solutionHero .eyebrow {
   font-size: 13px;
-  font-weight: 600;
-  color: var(--brand-blue-strong);
+  font-weight: 700;
+  color: #1a1a1a;
+  background: #ffc843;
+  padding: 6px 12px;
+  border-radius: 20px;
   letter-spacing: 0.02em;
   margin-bottom: 10px;
-  object-position: center; /* Ensure visual image positioning is centered */
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(255, 200, 67, 0.3);
 }
 .solutionHero .heroTitle {
   /* Strong, fluid headline with a cap to avoid overly long lines on large screens */
@@ -361,6 +365,13 @@ header.header {
   border-radius: 12px;
   border: 1px solid rgba(3, 58, 130, 0.03);
   box-shadow: 0 8px 24px rgba(15, 30, 50, 0.04);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: rgba(255, 200, 67, 0.3);
+  box-shadow: 0 12px 32px rgba(255, 200, 67, 0.15);
+  transform: translateY(-2px);
 }
 .card h3 {
   margin: 0 0 8px;
@@ -707,11 +718,20 @@ footer {
   margin-top: 12px;
 }
 .secondary {
-  background: transparent;
-  border: 1px solid #e0eef8;
-  color: var(--nav);
-  padding: 10px 12px;
+  background: #ffc843;
+  border: 2px solid #ffc843;
+  color: #1a1a1a;
+  padding: 10px 20px;
   border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.secondary:hover {
+  background: #e6b43d;
+  border-color: #e6b43d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 200, 67, 0.4);
 }
 .related {
   display: grid;
