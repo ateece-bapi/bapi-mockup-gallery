@@ -102,7 +102,8 @@ export default function Home() {
                 <div className='featuredBadge'>NEW</div>
                 <h3>Home V2 — Dark Mode Toggle</h3>
                 <p>
-                  Modern design with light/dark theme switcher and Tailwind CSS styling
+                  Modern design with light/dark theme switcher and Tailwind CSS
+                  styling
                 </p>
                 <span className='cardTag'>Interactive</span>
               </Link>
