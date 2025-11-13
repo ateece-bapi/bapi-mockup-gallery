@@ -82,6 +82,23 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Home Pages Section */}
+          <div className='mockupSection'>
+            <h2 className='sectionTitle'>Home Pages</h2>
+            <div className='mockupCards'>
+              <Link href='/home-v1' className='mockupCard featured'>
+                <div className='cardNumber'>07</div>
+                <div className='featuredBadge'>NEW</div>
+                <h3>Home V1 — Modern Professional</h3>
+                <p>
+                  Fresh, modern redesign with clear value proposition and
+                  engaging visuals
+                </p>
+                <span className='cardTag'>Homepage</span>
+              </Link>
+            </div>
+          </div>
         </div>
 
         <footer className='hubFooter'>
