@@ -87,15 +87,24 @@ export default function Home() {
           <div className='mockupSection'>
             <h2 className='sectionTitle'>Home Pages</h2>
             <div className='mockupCards'>
-              <Link href='/home-v1' className='mockupCard featured'>
+              <Link href='/home-v1' className='mockupCard'>
                 <div className='cardNumber'>07</div>
-                <div className='featuredBadge'>NEW</div>
                 <h3>Home V1 — Modern Professional</h3>
                 <p>
                   Fresh, modern redesign with clear value proposition and
                   engaging visuals
                 </p>
                 <span className='cardTag'>Homepage</span>
+              </Link>
+
+              <Link href='/home-v2' className='mockupCard featured'>
+                <div className='cardNumber'>08</div>
+                <div className='featuredBadge'>NEW</div>
+                <h3>Home V2 — Dark Mode Toggle</h3>
+                <p>
+                  Modern design with light/dark theme switcher and Tailwind CSS styling
+                </p>
+                <span className='cardTag'>Interactive</span>
               </Link>
             </div>
           </div>
