@@ -372,8 +372,8 @@ export default function Home() {
                 <div className='featuredBadge'>HEADLESS</div>
                 <h3>BAPI Headless — WP + Next.js</h3>
                 <p>
-                  Headless WordPress homepage built with Next.js — external
-                  preview
+                  Headless WordPress backend with a Next.js frontend — live
+                  external preview
                 </p>
                 <span className='cardTag'>Headless</span>
               </a>
