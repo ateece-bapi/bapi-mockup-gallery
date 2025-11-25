@@ -397,6 +397,40 @@ footer {
   font-size: 13px;
 }
 
+/* Font comparison grid for homepage */
+.fontCompare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 18px;
+}
+.fontSample {
+  background: rgba(255,255,255,0.6);
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(3,58,130,0.04);
+}
+.fontSample h1 {
+  margin: 8px 0 12px;
+  font-size: 28px;
+  line-height: 1.05;
+}
+.fontSample p {
+  margin: 0;
+  color: var(--muted);
+}
+.sampleTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+/* Font-family utility classes for comparison */
+.ff-montserrat { font-family: Montserrat, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+.ff-inter { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+.ff-merriweather { font-family: Merriweather, Georgia, 'Times New Roman', serif; }
+
 /* Mockup 2 specific */
 .wrap {
   max-width: 1100px;

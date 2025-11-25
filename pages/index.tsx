@@ -59,6 +59,45 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Font Comparison Section */}
+          <div className='mockupSection'>
+            <h2 className='sectionTitle'>Font Comparison</h2>
+            <div className='fontCompare'>
+              <div className='fontSample'>
+                <h3 className='sampleTitle'>
+                  Brand-style (Montserrat + Inter)
+                </h3>
+                <h1 className='ff-montserrat'>Headline sample — Montserrat</h1>
+                <p className='ff-inter'>
+                  Body sample text — Inter provides neutral UI readability for
+                  longer passages and small text.
+                </p>
+              </div>
+
+              <div className='fontSample'>
+                <h3 className='sampleTitle'>Neutral UI (Inter)</h3>
+                <h1 className='ff-inter'>Headline sample — Inter</h1>
+                <p className='ff-inter'>
+                  Body sample text — Inter is designed for interfaces and reads
+                  well at small sizes.
+                </p>
+              </div>
+
+              <div className='fontSample'>
+                <h3 className='sampleTitle'>
+                  Editorial (Merriweather + Inter)
+                </h3>
+                <h1 className='ff-merriweather'>
+                  Headline sample — Merriweather
+                </h1>
+                <p className='ff-inter'>
+                  Body sample text — Merriweather gives more personality for
+                  headings while Inter keeps body text neutral.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Wireframes / Team Images Section */}
           <div className='mockupSection'>
             <h2 className='sectionTitle'>Wireframes</h2>
