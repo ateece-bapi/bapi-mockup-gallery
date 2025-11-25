@@ -37,8 +37,7 @@
   --brand-font-stack: 'Acumin', Inter, system-ui, -apple-system, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-/* Import Inter for consistent typographic polish */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+/* Font faces are included via <link> in pages/_document.tsx */
 
 /* Dark mode removed per user request. */
 
@@ -430,6 +429,41 @@ footer {
 .ff-montserrat { font-family: Montserrat, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
 .ff-inter { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
 .ff-merriweather { font-family: Merriweather, Georgia, 'Times New Roman', serif; }
+
+/* Controls for the Font Comparison UI */
+.fontControls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.controlLabel {
+  font-size: 13px;
+  color: var(--muted);
+  margin-right: 6px;
+}
+.controlInput {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(3,58,130,0.08);
+  min-width: 220px;
+}
+.controlSelect {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(3,58,130,0.08);
+}
+
+/* Sample size utilities */
+.sample-sm { font-size: 18px; }
+.sample-md { font-size: 28px; }
+.sample-lg { font-size: 36px; }
+
+/* Weight utilities mapping to common font-weight numbers */
+.weight-regular { font-weight: 400; }
+.weight-medium { font-weight: 600; }
+.weight-bold { font-weight: 800; }
 
 /* Mockup 2 specific */
 .wrap {

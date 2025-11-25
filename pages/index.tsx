@@ -15,6 +15,60 @@ export default function Home() {
     setLastUpdated(formatted);
   }, []);
 
+  // Font comparison controls (shared state)
+  const [sampleText, setSampleText] = useState(
+    'The quick brown fox jumps over the lazy dog.'
+  );
+  const [size, setSize] = useState('md'); // 'sm' | 'md' | 'lg'
+  const [weight, setWeight] = useState('regular'); // 'regular' | 'medium' | 'bold'
+
+  function FontControls() {
+    return (
+      <div className='fontControls'>
+        <label className='controlLabel' htmlFor='sampleTextInput'>
+          Sample text
+        </label>
+        <input
+          id='sampleTextInput'
+          aria-label='Sample text for font comparison'
+          className='controlInput'
+          value={sampleText}
+          onChange={(e) => setSampleText(e.target.value)}
+        />
+
+        <label className='controlLabel' htmlFor='sizeSelect'>
+          Size
+        </label>
+        <select
+          id='sizeSelect'
+          aria-label='Sample size'
+          className='controlSelect'
+          value={size}
+          onChange={(e) => setSize(e.target.value)}
+        >
+          <option value='sm'>Small</option>
+          <option value='md'>Medium</option>
+          <option value='lg'>Large</option>
+        </select>
+
+        <label className='controlLabel' htmlFor='weightSelect'>
+          Weight
+        </label>
+        <select
+          id='weightSelect'
+          aria-label='Font weight'
+          className='controlSelect'
+          value={weight}
+          onChange={(e) => setWeight(e.target.value)}
+        >
+          <option value='regular'>Regular</option>
+          <option value='medium'>Medium</option>
+          <option value='bold'>Bold</option>
+        </select>
+      </div>
+    );
+  }
+
   return (
     <div className='mockupHub'>
       <Head>
@@ -34,7 +88,7 @@ export default function Home() {
           />
           <h1>Website Mockup Gallery</h1>
           <p className='hubSubtitle'>
-            Review and compare design variations for the WAM website
+            Review and compare variations to the BAPI Website
           </p>
         </div>
 
@@ -62,38 +116,99 @@ export default function Home() {
           {/* Font Comparison Section */}
           <div className='mockupSection'>
             <h2 className='sectionTitle'>Font Comparison</h2>
-            <div className='fontCompare'>
+            {/* Controls for font comparison: sample text, size, weight */}
+            <FontControls />
+            <div className='fontCompare' id='fontCompareContainer'>
               <div className='fontSample'>
                 <h3 className='sampleTitle'>
                   Brand-style (Montserrat + Inter)
                 </h3>
-                <h1 className='ff-montserrat'>Headline sample — Montserrat</h1>
-                <p className='ff-inter'>
-                  Body sample text — Inter provides neutral UI readability for
-                  longer passages and small text.
-                </p>
+                {/** Compute classes based on selected size/weight */}
+                {(() => {
+                  const sizeClass =
+                    size === 'sm'
+                      ? 'sample-sm'
+                      : size === 'lg'
+                      ? 'sample-lg'
+                      : 'sample-md';
+                  const weightClass =
+                    weight === 'regular'
+                      ? 'weight-regular'
+                      : weight === 'medium'
+                      ? 'weight-medium'
+                      : 'weight-bold';
+                  return (
+                    <>
+                      <h1
+                        className={`ff-montserrat ${sizeClass} ${weightClass}`}
+                        aria-live='polite'
+                      >
+                        {sampleText}
+                      </h1>
+                      <p className={`ff-inter ${weightClass}`}>{sampleText}</p>
+                    </>
+                  );
+                })()}
               </div>
 
               <div className='fontSample'>
                 <h3 className='sampleTitle'>Neutral UI (Inter)</h3>
-                <h1 className='ff-inter'>Headline sample — Inter</h1>
-                <p className='ff-inter'>
-                  Body sample text — Inter is designed for interfaces and reads
-                  well at small sizes.
-                </p>
+                {(() => {
+                  const sizeClass =
+                    size === 'sm'
+                      ? 'sample-sm'
+                      : size === 'lg'
+                      ? 'sample-lg'
+                      : 'sample-md';
+                  const weightClass =
+                    weight === 'regular'
+                      ? 'weight-regular'
+                      : weight === 'medium'
+                      ? 'weight-medium'
+                      : 'weight-bold';
+                  return (
+                    <>
+                      <h1
+                        className={`ff-inter ${sizeClass} ${weightClass}`}
+                        aria-live='polite'
+                      >
+                        {sampleText}
+                      </h1>
+                      <p className={`ff-inter ${weightClass}`}>{sampleText}</p>
+                    </>
+                  );
+                })()}
               </div>
 
               <div className='fontSample'>
                 <h3 className='sampleTitle'>
                   Editorial (Merriweather + Inter)
                 </h3>
-                <h1 className='ff-merriweather'>
-                  Headline sample — Merriweather
-                </h1>
-                <p className='ff-inter'>
-                  Body sample text — Merriweather gives more personality for
-                  headings while Inter keeps body text neutral.
-                </p>
+                {(() => {
+                  const sizeClass =
+                    size === 'sm'
+                      ? 'sample-sm'
+                      : size === 'lg'
+                      ? 'sample-lg'
+                      : 'sample-md';
+                  const weightClass =
+                    weight === 'regular'
+                      ? 'weight-regular'
+                      : weight === 'medium'
+                      ? 'weight-medium'
+                      : 'weight-bold';
+                  return (
+                    <>
+                      <h1
+                        className={`ff-merriweather ${sizeClass} ${weightClass}`}
+                        aria-live='polite'
+                      >
+                        {sampleText}
+                      </h1>
+                      <p className={`ff-inter ${weightClass}`}>{sampleText}</p>
+                    </>
+                  );
+                })()}
               </div>
             </div>
           </div>
