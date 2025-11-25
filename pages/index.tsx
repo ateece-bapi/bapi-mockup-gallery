@@ -1,7 +1,20 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [lastUpdated, setLastUpdated] = useState('');
+
+  useEffect(() => {
+    const d = new Date();
+    const formatted = d.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+    });
+    setLastUpdated(formatted);
+  }, []);
+
   return (
     <div className='mockupHub'>
       <Head>
@@ -215,7 +228,7 @@ export default function Home() {
         </div>
 
         <footer className='hubFooter'>
-          <p>Last updated: November 25, 2025</p>
+          <p>Last updated: {lastUpdated || 'November 25, 2025'}</p>
           <p className='footerNote'>
             Select any mockup above to view full design
           </p>
