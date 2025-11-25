@@ -215,7 +215,7 @@ export default function Home() {
         </div>
 
         <footer className='hubFooter'>
-          <p>Last updated: November 13, 2025</p>
+          <p>Last updated: November 25, 2025</p>
           <p className='footerNote'>
             Select any mockup above to view full design
           </p>
