@@ -46,80 +46,83 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Wireframes Section */}
+          {/* Wireframes / Team Images Section */}
           <div className='mockupSection'>
             <h2 className='sectionTitle'>Wireframes</h2>
             <div className='mockupCards wireframeGrid'>
               <a
-                href='/images/wireframe-1.svg'
+                href='/images/BAPI-homepage.png'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='mockupCard wireframeCard'
               >
                 <div className='cardNumber'>10</div>
-                <img src='/images/wireframe-1.svg' alt='Wireframe 1' />
-                <h3>Wireframe 1</h3>
-                <p>Homepage wireframe (attached)</p>
+                <img
+                  src='/images/BAPI-homepage.png'
+                  alt='BAPI Homepage mockup'
+                />
+                <h3>BAPI Homepage</h3>
+                <p>Homepage mockup (team)</p>
               </a>
 
               <a
-                href='/images/wireframe-2.svg'
+                href='/images/BAPI-category.png'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='mockupCard wireframeCard'
               >
                 <div className='cardNumber'>11</div>
-                <img src='/images/wireframe-2.svg' alt='Wireframe 2' />
-                <h3>Wireframe 2</h3>
-                <p>Promo + tile layout (attached)</p>
+                <img
+                  src='/images/BAPI-category.png'
+                  alt='Product category mockup'
+                />
+                <h3>Product Category</h3>
+                <p>Category / collection layout (team)</p>
               </a>
 
               <a
-                href='/images/wireframe-3.svg'
+                href='/images/BAPI-industry.png'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='mockupCard wireframeCard'
               >
                 <div className='cardNumber'>12</div>
-                <img src='/images/wireframe-3.svg' alt='Wireframe 3' />
-                <h3>Wireframe 3</h3>
-                <p>Industry / grid wireframe (attached)</p>
+                <img
+                  src='/images/BAPI-industry.png'
+                  alt='Industry page mockup'
+                />
+                <h3>Industry</h3>
+                <p>Industry landing mockup (team)</p>
               </a>
 
               <a
-                href='/images/wireframe-4.svg'
+                href='/images/BAPI-product.png'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='mockupCard wireframeCard'
               >
                 <div className='cardNumber'>13</div>
-                <img src='/images/wireframe-4.svg' alt='Wireframe 4' />
-                <h3>Wireframe 4</h3>
-                <p>Product detail layout (attached)</p>
+                <img
+                  src='/images/BAPI-product.png'
+                  alt='Product detail mockup'
+                />
+                <h3>Product Detail</h3>
+                <p>Product detail / PDP mockup (team)</p>
               </a>
 
               <a
-                href='/images/wireframe-5.svg'
+                href='/images/BAPI-solution.png'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='mockupCard wireframeCard'
               >
                 <div className='cardNumber'>14</div>
-                <img src='/images/wireframe-5.svg' alt='Wireframe 5' />
-                <h3>Wireframe 5</h3>
-                <p>Applications + branding (attached)</p>
-              </a>
-
-              <a
-                href='/images/wireframe-6.svg'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='mockupCard wireframeCard'
-              >
-                <div className='cardNumber'>15</div>
-                <img src='/images/wireframe-6.svg' alt='Wireframe 6' />
-                <h3>Wireframe 6</h3>
-                <p>Content + contact layout (attached)</p>
+                <img
+                  src='/images/BAPI-solution.png'
+                  alt='Solution / promo mockup'
+                />
+                <h3>Solution / Promo</h3>
+                <p>Promo / solution layout (team)</p>
               </a>
             </div>
           </div>
