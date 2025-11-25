@@ -210,6 +210,37 @@ export default function Home() {
                   );
                 })()}
               </div>
+
+              <div className='fontSample'>
+                <h3 className='sampleTitle'>System / Sans (Verdana Pro)</h3>
+                {(() => {
+                  const sizeClass =
+                    size === 'sm'
+                      ? 'sample-sm'
+                      : size === 'lg'
+                      ? 'sample-lg'
+                      : 'sample-md';
+                  const weightClass =
+                    weight === 'regular'
+                      ? 'weight-regular'
+                      : weight === 'medium'
+                      ? 'weight-medium'
+                      : 'weight-bold';
+                  return (
+                    <>
+                      <h1
+                        className={`ff-verdana-pro ${sizeClass} ${weightClass}`}
+                        aria-live='polite'
+                      >
+                        {sampleText}
+                      </h1>
+                      <p className={`ff-verdana-pro ${weightClass}`}>
+                        {sampleText}
+                      </p>
+                    </>
+                  );
+                })()}
+              </div>
             </div>
           </div>
 

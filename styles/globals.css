@@ -429,6 +429,7 @@ footer {
 .ff-montserrat { font-family: Montserrat, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
 .ff-inter { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
 .ff-merriweather { font-family: Merriweather, Georgia, 'Times New Roman', serif; }
+.ff-verdana-pro { font-family: 'Verdana Pro', Verdana, Geneva, Tahoma, sans-serif; }
 
 /* Controls for the Font Comparison UI */
 .fontControls {
