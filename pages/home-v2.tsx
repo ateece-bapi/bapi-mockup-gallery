@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+// Use native <img> to avoid next/image dev warning about fetchPriority
 import { useEffect, useState } from 'react';
 
 export default function HomeV2() {
@@ -42,12 +42,11 @@ export default function HomeV2() {
               <div className='flex items-center justify-between'>
                 {/* Logo */}
                 <div className='flex items-center'>
-                  <Image
+                  <img
                     src='/images/bapi-logo.svg'
                     alt='BAPI'
                     width={120}
                     height={42}
-                    priority
                   />
                 </div>
 
@@ -179,13 +178,12 @@ export default function HomeV2() {
                 {/* Hero Image */}
                 <div className='relative'>
                   <div className='relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-bapi-blue to-bapi-blue-dark dark:from-gray-800 dark:to-gray-900 p-8'>
-                    <Image
+                    <img
                       src='/images/wam-sensors-with-gateway.png'
                       alt='BAPI Sensors'
                       width={600}
                       height={500}
                       className='w-full h-auto'
-                      priority
                     />
                   </div>
                   {/* Decorative elements */}
@@ -331,7 +329,7 @@ export default function HomeV2() {
                 </div>
 
                 <div className='relative'>
-                  <Image
+                  <img
                     src='/images/wam-quantum-e1755178852283.png'
                     alt='BAPI Product Quality'
                     width={500}

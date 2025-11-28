@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+// Use native <img> to avoid next/image dev warning about fetchPriority
 
 export default function HomeV1() {
   return (
@@ -16,12 +16,11 @@ export default function HomeV1() {
       <nav className='nav'>
         <div className='nav-container'>
           <div className='nav-logo'>
-            <Image
+            <img
               src='/images/bapi-logo.svg'
               alt='BAPI'
               width={140}
               height={50}
-              priority
             />
           </div>
           <div className='nav-links'>
@@ -70,12 +69,11 @@ export default function HomeV1() {
           </div>
           <div className='hero-visual'>
             <div className='hero-image-wrapper'>
-              <Image
+              <img
                 src='/images/wam-sensors-with-gateway.png'
                 alt='BAPI Sensors'
                 width={600}
                 height={500}
-                priority
               />
             </div>
           </div>
@@ -217,7 +215,7 @@ export default function HomeV1() {
         <div className='applications-grid'>
           <div className='application-card'>
             <div className='application-image'>
-              <Image
+              <img
                 src='/images/hospitals-pharmacies-wam.png'
                 alt='Healthcare'
                 width={400}
@@ -238,7 +236,7 @@ export default function HomeV1() {
 
           <div className='application-card'>
             <div className='application-image'>
-              <Image
+              <img
                 src='/images/grocery-stores-wam.png'
                 alt='Commercial'
                 width={400}
@@ -259,7 +257,7 @@ export default function HomeV1() {
 
           <div className='application-card'>
             <div className='application-image'>
-              <Image
+              <img
                 src='/images/meat-processors-wam.png'
                 alt='Industrial'
                 width={400}
@@ -280,7 +278,7 @@ export default function HomeV1() {
 
           <div className='application-card'>
             <div className='application-image'>
-              <Image
+              <img
                 src='/images/greenhouses-wam.png'
                 alt='Specialized'
                 width={400}
@@ -356,7 +354,7 @@ export default function HomeV1() {
             </div>
           </div>
           <div className='feature-visual'>
-            <Image
+            <img
               src='/images/wam-quantum-e1755178852283.png'
               alt='BAPI Product Quality'
               width={500}
