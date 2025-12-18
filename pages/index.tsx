@@ -72,7 +72,7 @@ export default function Home() {
   return (
     <div className='mockupHub'>
       <Head>
-        <title>WAM Website Mockups — Team Review Hub</title>
+        <title>BAPI Website Mockups — Team Review Hub</title>
         <meta
           name='description'
           content='Review and compare WAM website design mockups and landing page variations'
