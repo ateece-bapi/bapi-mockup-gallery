@@ -25,32 +25,24 @@ export default function BannerB() {
             <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700'>
               <li className='inline-flex items-center gap-3'>
                 <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-white shadow text-brand-blue'>
-
-                >
                   📊
                 </span>
                 Real-time dashboards
               </li>
               <li className='inline-flex items-center gap-3'>
                 <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-white shadow text-brand-blue'>
-
-                >
                   🔁
                 </span>
                 Exportable CSV & API
               </li>
               <li className='inline-flex items-center gap-3'>
                 <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-white shadow text-brand-blue'>
-
-                >
                   🛠️
                 </span>
                 Field calibration & probes
               </li>
               <li className='inline-flex items-center gap-3'>
                 <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-white shadow text-brand-blue'>
-
-                >
                   🔒
                 </span>
                 Enterprise security
