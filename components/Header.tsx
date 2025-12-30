@@ -13,7 +13,7 @@ export default function Header() {
           <Link href='/mockup1'>Mockup 1</Link>
           <Link href='/mockup2'>Mockup 2</Link>
           <Link href='/landing-a'>Landing A</Link>
-          <Link href='/landing-b'>Landing B</Link>
+          {/* Landing B removed as requested */}
         </nav>
       </div>
     </header>

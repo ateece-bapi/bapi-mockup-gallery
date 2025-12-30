@@ -2,6 +2,62 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+type FontControlsProps = {
+  sampleText: string;
+  setSampleText: (v: string) => void;
+  size: 'sm' | 'md' | 'lg';
+  setSize: (v: 'sm' | 'md' | 'lg') => void;
+  weight: 'regular' | 'medium' | 'bold';
+  setWeight: (v: 'regular' | 'medium' | 'bold') => void;
+};
+
+function FontControls({ sampleText, setSampleText, size, setSize, weight, setWeight }: FontControlsProps) {
+  return (
+    <div className='fontControls'>
+      <label className='controlLabel' htmlFor='sampleTextInput'>
+        Sample text
+      </label>
+      <input
+        id='sampleTextInput'
+        aria-label='Sample text for font comparison'
+        className='controlInput'
+        value={sampleText}
+        onChange={(e) => setSampleText(e.target.value)}
+      />
+
+      <label className='controlLabel' htmlFor='sizeSelect'>
+        Size
+      </label>
+      <select
+        id='sizeSelect'
+        aria-label='Sample size'
+        className='controlSelect'
+        value={size}
+        onChange={(e) => setSize(e.target.value as 'sm' | 'md' | 'lg')}
+      >
+        <option value='sm'>Small</option>
+        <option value='md'>Medium</option>
+        <option value='lg'>Large</option>
+      </select>
+
+      <label className='controlLabel' htmlFor='weightSelect'>
+        Weight
+      </label>
+      <select
+        id='weightSelect'
+        aria-label='Font weight'
+        className='controlSelect'
+        value={weight}
+        onChange={(e) => setWeight(e.target.value as 'regular' | 'medium' | 'bold')}
+      >
+        <option value='regular'>Regular</option>
+        <option value='medium'>Medium</option>
+        <option value='bold'>Bold</option>
+      </select>
+    </div>
+  );
+}
+
 export default function Home() {
   const [lastUpdated, setLastUpdated] = useState('');
 
@@ -19,55 +75,8 @@ export default function Home() {
   const [sampleText, setSampleText] = useState(
     'The quick brown fox jumps over the lazy dog.'
   );
-  const [size, setSize] = useState('md'); // 'sm' | 'md' | 'lg'
-  const [weight, setWeight] = useState('regular'); // 'regular' | 'medium' | 'bold'
-
-  function FontControls() {
-    return (
-      <div className='fontControls'>
-        <label className='controlLabel' htmlFor='sampleTextInput'>
-          Sample text
-        </label>
-        <input
-          id='sampleTextInput'
-          aria-label='Sample text for font comparison'
-          className='controlInput'
-          value={sampleText}
-          onChange={(e) => setSampleText(e.target.value)}
-        />
-
-        <label className='controlLabel' htmlFor='sizeSelect'>
-          Size
-        </label>
-        <select
-          id='sizeSelect'
-          aria-label='Sample size'
-          className='controlSelect'
-          value={size}
-          onChange={(e) => setSize(e.target.value)}
-        >
-          <option value='sm'>Small</option>
-          <option value='md'>Medium</option>
-          <option value='lg'>Large</option>
-        </select>
-
-        <label className='controlLabel' htmlFor='weightSelect'>
-          Weight
-        </label>
-        <select
-          id='weightSelect'
-          aria-label='Font weight'
-          className='controlSelect'
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-        >
-          <option value='regular'>Regular</option>
-          <option value='medium'>Medium</option>
-          <option value='bold'>Bold</option>
-        </select>
-      </div>
-    );
-  }
+  const [size, setSize] = useState<'sm' | 'md' | 'lg'>('md');
+  const [weight, setWeight] = useState<'regular' | 'medium' | 'bold'>('regular');
 
   return (
     <div className='mockupHub'>
@@ -81,11 +90,6 @@ export default function Home() {
 
       <main className='hubMain'>
         <div className='hubHeader'>
-          <img
-            src='/images/wam-logo.png'
-            alt='WAM - Wireless Asset Monitoring'
-            className='hubLogo'
-          />
           <h1>Website Mockup Gallery</h1>
           <p className='hubSubtitle'>
             Review and compare variations to the BAPI Website
@@ -93,22 +97,38 @@ export default function Home() {
         </div>
 
         <div className='mockupGrid'>
-          {/* Product Mockups Section */}
+          {/* Headless Projects Section */}
           <div className='mockupSection'>
-            <h2 className='sectionTitle'>Product Pages</h2>
+            <h2 className='sectionTitle'>Headless Projects</h2>
             <div className='mockupCards'>
-              <Link href='/mockup1' className='mockupCard'>
-                <div className='cardNumber'>01</div>
-                <h3>Product Grid Layout</h3>
-                <p>Clean product showcase with grid-based navigation</p>
-                <span className='cardTag'>Product Focus</span>
+              <a
+                href='https://bapi-headless.vercel.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='mockupCard featured'
+              >
+                <div className='cardNumber'>09</div>
+                <div className='featuredBadge'>HEADLESS</div>
+                <h3>BAPI Headless — WP + Next.js</h3>
+                <p>
+                  Headless WordPress backend with a Next.js frontend — live
+                  external preview
+                </p>
+                <span className='cardTag'>Headless</span>
+              </a>
+
+              <Link href='/daily-log' className='mockupCard'>
+                <div className='cardNumber'>10</div>
+                <h3>Daily Log</h3>
+                <p>Track daily progress on the BAPI Headless project</p>
+                <span className='cardTag'>Documentation</span>
               </Link>
 
-              <Link href='/mockup2' className='mockupCard'>
-                <div className='cardNumber'>02</div>
-                <h3>Technical Detail View</h3>
-                <p>In-depth technical specifications and features</p>
-                <span className='cardTag'>Technical</span>
+              <Link href='/todo' className='mockupCard'>
+                <div className='cardNumber'>11</div>
+                <h3>TODO & Next Steps</h3>
+                <p>Current tasks and upcoming features for BAPI Headless</p>
+                <span className='cardTag'>Documentation</span>
               </Link>
             </div>
           </div>
@@ -116,127 +136,68 @@ export default function Home() {
           {/* Font Comparison Section */}
           <div className='mockupSection'>
             <h2 className='sectionTitle'>Font Comparison</h2>
-            {/* Controls for font comparison: sample text, size, weight */}
-            <FontControls />
+            <FontControls
+              sampleText={sampleText}
+              setSampleText={setSampleText}
+              size={size}
+              setSize={setSize}
+              weight={weight}
+              setWeight={setWeight}
+            />
             <div className='fontCompare' id='fontCompareContainer'>
               <div className='fontSample'>
-                <h3 className='sampleTitle'>
-                  Brand-style (Montserrat + Inter)
-                </h3>
-                {/** Compute classes based on selected size/weight */}
+                <h3 className='sampleTitle'>Roboto</h3>
                 {(() => {
-                  const sizeClass =
-                    size === 'sm'
-                      ? 'sample-sm'
-                      : size === 'lg'
-                      ? 'sample-lg'
-                      : 'sample-md';
-                  const weightClass =
-                    weight === 'regular'
-                      ? 'weight-regular'
-                      : weight === 'medium'
-                      ? 'weight-medium'
-                      : 'weight-bold';
+                  const fontSizes = { sm: '1rem', md: '1.5rem', lg: '2.25rem' };
+                  const fontWeights = { regular: 400, medium: 500, bold: 700 };
                   return (
                     <>
                       <h1
-                        className={`ff-montserrat ${sizeClass} ${weightClass}`}
+                        className='ff-roboto'
+                        style={{ fontSize: fontSizes[size], fontWeight: fontWeights[weight] }}
                         aria-live='polite'
                       >
                         {sampleText}
                       </h1>
-                      <p className={`ff-inter ${weightClass}`}>{sampleText}</p>
+                      <p className='ff-roboto' style={{ fontSize: fontSizes[size], fontWeight: fontWeights[weight] }}>{sampleText}</p>
                     </>
                   );
                 })()}
               </div>
-
               <div className='fontSample'>
-                <h3 className='sampleTitle'>Neutral UI (Inter)</h3>
+                <h3 className='sampleTitle'>Acumin Semicondensed</h3>
                 {(() => {
-                  const sizeClass =
-                    size === 'sm'
-                      ? 'sample-sm'
-                      : size === 'lg'
-                      ? 'sample-lg'
-                      : 'sample-md';
-                  const weightClass =
-                    weight === 'regular'
-                      ? 'weight-regular'
-                      : weight === 'medium'
-                      ? 'weight-medium'
-                      : 'weight-bold';
+                  const fontSizes = { sm: '1rem', md: '1.5rem', lg: '2.25rem' };
+                  const fontWeights = { regular: 400, medium: 500, bold: 700 };
                   return (
                     <>
                       <h1
-                        className={`ff-inter ${sizeClass} ${weightClass}`}
+                        className='ff-acumin-pro-condensed'
+                        style={{ fontSize: fontSizes[size], fontWeight: fontWeights[weight] }}
                         aria-live='polite'
                       >
                         {sampleText}
                       </h1>
-                      <p className={`ff-inter ${weightClass}`}>{sampleText}</p>
+                      <p className='ff-acumin-pro-condensed' style={{ fontSize: fontSizes[size], fontWeight: fontWeights[weight] }}>{sampleText}</p>
                     </>
                   );
                 })()}
               </div>
-
               <div className='fontSample'>
-                <h3 className='sampleTitle'>
-                  Editorial (Merriweather + Inter)
-                </h3>
+                <h3 className='sampleTitle'>Acumin Condensed</h3>
                 {(() => {
-                  const sizeClass =
-                    size === 'sm'
-                      ? 'sample-sm'
-                      : size === 'lg'
-                      ? 'sample-lg'
-                      : 'sample-md';
-                  const weightClass =
-                    weight === 'regular'
-                      ? 'weight-regular'
-                      : weight === 'medium'
-                      ? 'weight-medium'
-                      : 'weight-bold';
+                  const fontSizes = { sm: '1rem', md: '1.5rem', lg: '2.25rem' };
+                  const fontWeights = { regular: 400, medium: 500, bold: 700 };
                   return (
                     <>
                       <h1
-                        className={`ff-merriweather ${sizeClass} ${weightClass}`}
+                        className='ff-acumin-pro'
+                        style={{ fontSize: fontSizes[size], fontWeight: fontWeights[weight] }}
                         aria-live='polite'
                       >
                         {sampleText}
                       </h1>
-                      <p className={`ff-inter ${weightClass}`}>{sampleText}</p>
-                    </>
-                  );
-                })()}
-              </div>
-
-              <div className='fontSample'>
-                <h3 className='sampleTitle'>System / Sans (Verdana Pro)</h3>
-                {(() => {
-                  const sizeClass =
-                    size === 'sm'
-                      ? 'sample-sm'
-                      : size === 'lg'
-                      ? 'sample-lg'
-                      : 'sample-md';
-                  const weightClass =
-                    weight === 'regular'
-                      ? 'weight-regular'
-                      : weight === 'medium'
-                      ? 'weight-medium'
-                      : 'weight-bold';
-                  return (
-                    <>
-                      <h1
-                        className={`ff-verdana-pro ${sizeClass} ${weightClass}`}
-                        aria-live='polite'
-                      >
-                        {sampleText}
-                      </h1>
-                      <p className={`ff-verdana-pro ${weightClass}`}>
-                        {sampleText}
-                      </p>
+                      <p className='ff-acumin-pro' style={{ fontSize: fontSizes[size], fontWeight: fontWeights[weight] }}>{sampleText}</p>
                     </>
                   );
                 })()}
@@ -343,12 +304,7 @@ export default function Home() {
                 <span className='cardTag'>Marketing</span>
               </Link>
 
-              <Link href='/landing-b' className='mockupCard'>
-                <div className='cardNumber'>05</div>
-                <h3>Landing B — Technical Focus</h3>
-                <p>Specification-driven layout for technical audiences</p>
-                <span className='cardTag'>Technical</span>
-              </Link>
+              {/* Landing B removed as requested */}
 
               <Link href='/landing-a-v2' className='mockupCard featured'>
                 <div className='cardNumber'>06</div>
@@ -389,43 +345,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Headless Projects Section */}
-          <div className='mockupSection'>
-            <h2 className='sectionTitle'>Headless Projects</h2>
-            <div className='mockupCards'>
-              <a
-                href='https://bapi-headless.vercel.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='mockupCard featured'
-              >
-                <div className='cardNumber'>09</div>
-                <div className='featuredBadge'>HEADLESS</div>
-                <h3>BAPI Headless — WP + Next.js</h3>
-                <p>
-                  Headless WordPress backend with a Next.js frontend — live
-                  external preview
-                </p>
-                <span className='cardTag'>Headless</span>
-              </a>
-
-              {/* NEW: Daily Log Link */}
-              <Link href='/daily-log' className='mockupCard'>
-                <div className='cardNumber'>10</div>
-                <h3>Daily Log</h3>
-                <p>Track daily progress on the BAPI Headless project</p>
-                <span className='cardTag'>Documentation</span>
-              </Link>
-
-              {/* NEW: TODO Link */}
-              <Link href='/todo' className='mockupCard'>
-                <div className='cardNumber'>11</div>
-                <h3>TODO & Next Steps</h3>
-                <p>Current tasks and upcoming features for BAPI Headless</p>
-                <span className='cardTag'>Documentation</span>
-              </Link>
-            </div>
-          </div>
+          {/* Headless Projects Section removed (duplicate) */}
         </div>
 
         <footer className='hubFooter'>
