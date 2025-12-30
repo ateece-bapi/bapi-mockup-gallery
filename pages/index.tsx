@@ -408,6 +408,22 @@ export default function Home() {
                 </p>
                 <span className='cardTag'>Headless</span>
               </a>
+
+              {/* NEW: Daily Log Link */}
+              <Link href='/daily-log' className='mockupCard'>
+                <div className='cardNumber'>10</div>
+                <h3>Daily Log</h3>
+                <p>Track daily progress on the BAPI Headless project</p>
+                <span className='cardTag'>Documentation</span>
+              </Link>
+
+              {/* NEW: TODO Link */}
+              <Link href='/todo' className='mockupCard'>
+                <div className='cardNumber'>11</div>
+                <h3>TODO & Next Steps</h3>
+                <p>Current tasks and upcoming features for BAPI Headless</p>
+                <span className='cardTag'>Documentation</span>
+              </Link>
             </div>
           </div>
         </div>
