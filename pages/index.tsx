@@ -130,6 +130,20 @@ export default function Home() {
                 <p>Current tasks and upcoming features for BAPI Headless</p>
                 <span className='cardTag'>Documentation</span>
               </Link>
+
+              <Link href='/competitor-analysis-belimo' className='mockupCard'>
+                <div className='cardNumber'>12</div>
+                <h3>Competitor Analysis: Belimo</h3>
+                <p>In-depth analysis of Belimo's market position and strategies</p>
+                <span className='cardTag'>Research</span>
+              </Link>
+
+              <Link href='/competitive-ecosystem-analysis' className='mockupCard'>
+                <div className='cardNumber'>13</div>
+                <h3>Competitive Ecosystem Analysis</h3>
+                <p>Comprehensive overview of the competitive landscape</p>
+                <span className='cardTag'>Research</span>
+              </Link>
             </div>
           </div>
 

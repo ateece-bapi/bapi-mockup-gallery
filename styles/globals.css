@@ -11,7 +11,7 @@
   padding-bottom: 24px;
 }
 .hubHeader h1 {
-  font-family: 'Acumin Pro', 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: clamp(3.5rem, 7vw, 5.5rem);
   font-weight: 900;
   color: #0056d6;
@@ -146,7 +146,7 @@
   --focus-ring: rgba(0, 114, 206, 0.16);
 
   /* Font stack: prefer Acumin if self-hosted, fallback to Inter then system fonts */
-  --brand-font-stack: 'acumin-pro-condensed', 'acumin-pro', Roboto, 'Helvetica Neue', Arial, Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --brand-font-stack: 'Roboto', Arial, sans-serif;
 }
 /* Font faces are included via <link> in pages/_document.tsx */
 
@@ -168,7 +168,7 @@ html {
 
 /* Buttons: improved visuals and focus */
 .btn {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -333,7 +333,7 @@ header.header {
 /* Debug helper removed — final polish applied */
 
 .bannerCtas .btn {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -749,7 +749,7 @@ footer {
   /* Make small CTA variants a touch larger and pill-like in banner areas */
   /* Make small CTA variants a touch larger and pill-like in banner areas */
   .bannerCtas .secondary {
-    font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     padding: 12px 20px;
     border-radius: 999px;
     font-weight: 700;
@@ -761,7 +761,7 @@ footer {
 
   /* Ensure button.secondary mirrors anchor.secondary */
   button.secondary {
-    font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background: transparent;
     border: 1px solid rgba(3, 58, 130, 0.22);
     color: var(--brand-blue-strong);
@@ -960,7 +960,7 @@ footer {
   margin-top: 12px;
 }
 .secondary {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1389,7 +1389,7 @@ footer {
   font-weight: 600;
 }
 .landingB .bannerCtas .btn {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1401,7 +1401,7 @@ footer {
   box-shadow: none;
 }
 .landingB .bannerCtas .secondary {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1445,7 +1445,7 @@ footer {
   gap: 10px;
 }
 .landingB .downloadRow .secondary {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1717,7 +1717,7 @@ footer {
 }
 
 .downloadRow .secondary {
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1782,7 +1782,7 @@ footer {
   letter-spacing: -0.025em;
   line-height: 1.08;
   text-shadow: 0 2px 12px rgba(0,114,206,0.08);
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1795,7 +1795,7 @@ footer {
   font-weight: 500;
   letter-spacing: 0.01em;
   text-shadow: 0 1px 6px rgba(0,114,206,0.06);
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
@@ -1845,7 +1845,7 @@ footer {
   position: relative;
   padding-bottom: 10px;
   line-height: 1.18;
-  font-family: 'acumin-pro-condensed', 'acumin-pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .sectionTitle::after {
